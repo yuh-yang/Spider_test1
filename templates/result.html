@@ -9,19 +9,13 @@
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <title>武汉大学计算机学院通知公告抓取</title>
-
+    <title>搜索结果</title>
 </head>
 <body>
-    <form method="get" action="/search/" style=" margin-left: 110px; margin-top: 10px">
-        {% csrf_token %}
-        <input type="search" name = "q" placeholder="请输入" required>
-        <button type="submit"><span class="ion-ios-search-strong">搜索</span></button>
-    </form>
     <div class="container">
-        <h2>武汉大学计算机学院通知公告抓取</h2>
+        <h2>搜索结果</h2>
             <ul class="nav nav-pills nav-stacked">
-                {% for i in QuerySet %}
+                {% for i in post_list %}
                 <!-- 按钮触发模态框 -->
                     <li role="presentation" data-toggle="modal" data-target="#myModal{{ i.id }}"><a href="#">{{ i.head }}</a></li>
                 <!-- 模态框（Modal） -->
