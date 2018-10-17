@@ -21,6 +21,8 @@ from zspider1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', views.home, name='home'),
-    url(r'^search/$', views.search, name='search')
+    url(r'^home$', views.home, name='home'),
+    url(r'^search/$', views.search, name='search'),
+    url(r'^$', views.choose_form, name='choose_form'),
+    url(r'^choose/$', views.choose, name='choose')
 ]
